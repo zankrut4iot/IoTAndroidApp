@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WS4D Droid Commander</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Explore">Explore</string>
+    <string name="Settings">Settings</string>
+    <string name="Button">Button3</string>
+    <string name="WelcomeText">Touch the logo to start exploring.</string>
+    <string name="Welcome">Welcome</string>
+    <string name="title_activity_explore">ExploreActivity</string>
+    <string name="title_activity_dark">DarkActivity</string>
+    <string name="Refresh">Refresh</string>
+    <string name="title_activity_device">DeviceActivity</string>
+    <string name="ws4dlogo">ws4dlogo</string>
+    <string name="ServiceInfo">Service Info</string>
+
+    <color name="Black">#000000</color>
+    <color name="ExpandChildBackground">#FFAFABAB</color>
+    <color name="ExpandGroupBackground">#FF7C7C7C</color>
+
+    <string name="title_activity_service">Service</string>
+    <string name="title_activity_operation">OperationActivity</string>
+
+</resources>

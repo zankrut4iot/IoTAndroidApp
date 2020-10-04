@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ws4d.droidcommander"
+    android:versionCode="2"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.ws4d.droidcommander.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ws4d.droidcommander.ExploreActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_explore"
+            android:parentActivityName="com.ws4d.droidcommander.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dpwsexplorer.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.ws4d.droidcommander.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.ws4d.droidcommander.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dpwsexplorer.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.ws4d.droidcommander.DeviceActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_device"
+            android:parentActivityName="com.ws4d.droidcommander.ExploreActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dpwsexplorer.ExploreActivity" />
+        </activity>
+
+        <service android:name="com.ws4d.droidcommander.DPWSService" >
+        </service>
+
+        <activity
+            android:name="com.ws4d.droidcommander.ServiceActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_service"
+            android:parentActivityName="com.ws4d.droidcommander.DeviceActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dpwsexplorer.DeviceActivity" />
+        </activity>
+        <activity
+            android:name="com.ws4d.droidcommander.OperationActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_operation"
+            android:parentActivityName="com.ws4d.droidcommander.ServiceActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dpwsexplorer.ServiceActivity" />
+        </activity>
+    </application>
+
+</manifest>

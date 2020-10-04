@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "com.ws4d.droidcommander"
+        minSdkVersion 14
+        targetSdkVersion 17
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-v4:18.0.0'
+    implementation files('libs/ws4d-java-android-full-debug-with-security.jar')
+}
